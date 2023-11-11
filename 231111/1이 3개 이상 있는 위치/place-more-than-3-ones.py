@@ -1,5 +1,5 @@
 def in_range(x,y,n):
-    if x<n and y<n:
+    if x<n and y<n and x>=0 and y>=0:
         return True
     else:
         return False
