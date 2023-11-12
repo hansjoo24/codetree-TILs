@@ -13,6 +13,8 @@ cnt = 0
 answer = -1
 
 for i in range(n):
+    if answer != -1:
+        break
     direction, distance = input().split()
     distance = int(distance)
     dx = dxs[dir_name[direction]]
