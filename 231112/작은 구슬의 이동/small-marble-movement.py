@@ -1,8 +1,8 @@
 def change_direction(r,c,n,direction):
-    U,D,R,L = 1,2,0,3
+    U,D,R,L = 2,1,0,3
     if r==1 and direction == U:
         return True
-    elif r==n and direction==D:
+    elif r==n and direction== D:
         return True
     elif c==1 and direction == L:
         return True
@@ -16,10 +16,10 @@ r,c,direction = input().split()
 r,c = int(r), int(c)
 dx = [1,0,0,-1]
 dy = [0,1,-1,0]
-dir_name = {'U':1, 'D':2, 'R':0, 'L':3}
+dir_name = {'U':2, 'D':1, 'R':0, 'L':3}
 dir_num = dir_name[direction]
 
-for _ in range(t):
+for i in range(t):
     if(change_direction(r,c,n,dir_num)):
         dir_num = 3-dir_num
         continue
@@ -27,4 +27,6 @@ for _ in range(t):
     r += dy[dir_num]
     c += dx[dir_num]
 
+    #print(i,r,c)
+    #print(dir_num)
 print(r,c)
