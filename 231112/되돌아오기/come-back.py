@@ -9,7 +9,7 @@ dir_name = {
 x,y = 0,0
 
 n = int(input())
-cnt = 1
+cnt = 0
 answer = -1
 
 for i in range(n):
@@ -21,8 +21,8 @@ for i in range(n):
     for _ in range(distance):
         x += dx
         y += dy
-        if cnt != 1 and x==0 and y==0:
-            answer = cnt
+        if cnt != 0 and x==0 and y==0:
+            answer = cnt+1
         else: cnt +=1 
 
 print(answer)
