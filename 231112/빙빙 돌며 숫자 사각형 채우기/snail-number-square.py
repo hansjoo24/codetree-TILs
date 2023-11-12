@@ -1,5 +1,5 @@
-def in_range(x,y,n):
-    return x>=0 and x<n and y>=0 and y<n
+def in_range(x,y,n,m):
+    return x>=0 and x<n and y>=0 and y<m
 
 n,m = map(int,input().split())
 dxs = [0,1,0,-1]
@@ -21,7 +21,7 @@ square[0][0] = 1
 num = 2
 while num <= m*n:
     dx, dy = dxs[direction], dys[direction]
-    if(in_range(r+dx,c+dy,n) and square[r+dx][c+dy]==0):
+    if(in_range(r+dx,c+dy,n,m) and square[r+dx][c+dy]==0):
         r+=dx
         c+=dy
         square[r][c] = num
