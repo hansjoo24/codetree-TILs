@@ -7,10 +7,7 @@ direction = 3
 x,y = 0,0
 
 for i in instruction:
-    #print(x,y)
-    if elapsed_time!=0 and x==0 and y==0:
-        print(elapsed_time)
-        break
+    #print(x,y,direction)
 
     match(i):
         case 'F':
@@ -20,6 +17,11 @@ for i in instruction:
         case 'L':
             direction = (direction-1+4)%4
 
-    elapsed_time +=1 
+    if elapsed_time!=0 and x==0 and y==0:
+        print(elapsed_time+1)
+        break
+
+    else:
+        elapsed_time +=1 
 else:
     print(-1)
