@@ -10,8 +10,8 @@ if(start == end):
     print(0)
 else:
     answer = 0
-    for i1 in range(r-2):
-        for j1 in range(c-2):
+    for i1 in range(1,r-2):
+        for j1 in range(1,c-2):
             if arr[i1][j1] != start:
                 #print("1 :",i1,j1)
 
@@ -21,5 +21,5 @@ else:
                             #print("2 : ",i2,j2)
                             answer +=1 
         
-
+        #print()
     print(answer)
