@@ -8,10 +8,12 @@
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-1|330xp|9일째🔥|
+3|330xp|9일째🔥|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
+|[Novice Mid / 완전탐색 I / 자리 수 단위로 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[개념]최고의 13위치](https://www.codetree.ai/missions/5/problems/best-place-of-13)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/hansjoo24/codetree-TILs/blob/main/231113/%EC%B5%9C%EA%B3%A0%EC%9D%98%2013%EC%9C%84%EC%B9%98/best-place-of-13.py)|
+|[Novice Mid / 완전탐색 I / 자리 수 단위로 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[개념]체크판위에서 2](https://www.codetree.ai/missions/5/problems/on-the-checkboard-2)|![보통][medium]|![Passed][passed]|[링크](https://github.com/hansjoo24/codetree-TILs/blob/main/231113/%EC%B2%B4%ED%81%AC%ED%8C%90%EC%9C%84%EC%97%90%EC%84%9C%202/on-the-checkboard-2.py)|
 |[Novice Mid / 완전탐색 I / 자리 수 단위로 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[연습]이상한 진수 2](https://www.codetree.ai/missions/5/problems/awkward-digits-2)|![보통][medium]|![Passed][passed]|[링크](https://github.com/hansjoo24/codetree-TILs/blob/main/231113/%EC%9D%B4%EC%83%81%ED%95%9C%20%EC%A7%84%EC%88%98%202/awkward-digits-2.py)|
 
 
