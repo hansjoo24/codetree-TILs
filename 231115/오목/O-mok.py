@@ -11,7 +11,6 @@ dxs = [0,1,1,1,0,-1,-1,-1]
 dys = [1,1,0,-1,-1,-1,0,1]
 
 win_stone_num = 0
-center_r, center_c = 0,0
 
 for i in range(LENGTH):
     for j in range(LENGTH):
