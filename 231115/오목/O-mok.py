@@ -4,95 +4,33 @@ stones = [
     for _ in range(LENGTH)
 ] 
 
-def horizontal_win(r,c):
-    global stones
-    stone_num = stones[r][c]
-    if stone_num == 0:
-        return False 
+def in_range(x,y):
+    return x>=0 and x<LENGTH and y>=0 and y<LENGTH
 
-    for i in range(c,c+5):
-        if i >= LENGTH:
-            return False
-        else:
-            if stones[r][i]!=stone_num:
-                return False
-    #print(r,c,"가로")
-    return True
+dxs = [0,1,1,1,0,-1,-1,-1]
+dys = [1,1,0,-1,-1,-1,0,1]
 
-def vertical_win(r,c):
-    global stones
-    stone_num = stones[r][c]
-    if stone_num == 0:
-        return False 
+win_stone_num = 0
+center_r, center_c = 0,0
+direction = -1
 
-    for i in range(r,r+5):
-        if i >= LENGTH:
-            return False
-        else:
-            if stones[i][c]!=stone_num:
-                return False
-    #print(r,c,"세로")
-    return True
-
-def diagonal_win(r,c):
-    global stones
-    stone_num = stones[r][c]
-    if stone_num == 0:
-        return False
-
-    for i in range(5):
-        newr,newc = r+i, c+i
-        if newr>= LENGTH or newc>= LENGTH:
-            return False
-        else:
-            if stones[newr][newc]!=stone_num:
-                return False
-    #print(r,c,"대각선 오른쪽")
-    return True
-
-def diagonal_left_win(r,c):
-    global stones
-    stone_num = stones[r][c]
-    if stone_num == 0:
-        return False
-
-    for i in range(5):
-        newr,newc = r+i, c-i
-        if newr>= LENGTH or newc< 0:
-            return False
-        else:
-            if stones[newr][newc]!=stone_num:
-                return False
-    #print(r,c,"대각선 오른쪽")
-    return True
-
-win_stone = 0
-center_r,center_c = -1,-1
 for i in range(LENGTH):
     for j in range(LENGTH):
-        if horizontal_win(i,j):
-            win_stone = stones[i][j]
-            center_r,center_c = i+1,j+3
-            break
+        cur_stone_num = stones[i][j]
+        if cur_stone_num==0:
+            continue
 
-        elif vertical_win(i,j):
-            win_stone = stones[i][j]
-            center_r,center_c = i+3,j+1
-            break
+        cur_r, cur_c = i,j
+        
+        for dx,dy in zip(dxs,dys):
+            for _ in range(5):
+                if in_range(cur_r+dx,cur_c+dy):
+                    cur_r,cur_c = cur_r+dx, cur_c+dy
+                    if stones[cur_r][cur_c] != cur_stone_num:
+                        break
 
-        elif diagonal_win(i,j):
-            win_stone = stones[i][j]
-            center_r,center_c = i+3,j+3
-            break
-
-        elif diagonal_left_win(i,j):
-            win_stone = stones[i][j]
-            center_r,center_c = i+3,j-1
-            break
-
-
-if win_stone == 0:
-    print(0)
-else:
-    print(win_stone)
-    print(center_r,center_c)
+                else:
+                    break
+            else:
+                print(cur_stone_num)
+                print(i+1+2*dx,j+1+2*dy)
