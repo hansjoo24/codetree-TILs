@@ -87,7 +87,7 @@ for i in range(LENGTH):
 
         elif diagonal_left_win(i,j):
             win_stone = stones[i][j]
-            center_x,center_y = i+3,j-3
+            center_r,center_c = i+3,j-1
             break
 
 
@@ -95,4 +95,4 @@ if win_stone == 0:
     print(0)
 else:
     print(win_stone)
-    print(center_x,center_y)
+    print(center_r,center_c)
