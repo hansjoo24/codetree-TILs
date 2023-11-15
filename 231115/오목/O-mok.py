@@ -40,3 +40,5 @@ for i in range(LENGTH):
                 print(cur_stone_num)
                 print(i+1+2*dx,j+1+2*dy)
                 sys.exit()
+
+print(0)
