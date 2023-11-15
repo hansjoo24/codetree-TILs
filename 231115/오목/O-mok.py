@@ -67,22 +67,22 @@ def diagonal_left_win(r,c):
     return True
 
 win_stone = 0
-center_x, center_y = -1,-1
+center_r,center_c = -1,-1
 for i in range(LENGTH):
     for j in range(LENGTH):
         if horizontal_win(i,j):
             win_stone = stones[i][j]
-            center_x,center_y = i+1,j+3
+            center_r,center_c = i+1,j+3
             break
 
         elif vertical_win(i,j):
             win_stone = stones[i][j]
-            center_x,center_y = i+3,j+1
+            center_r,center_c = i+3,j+1
             break
 
         elif diagonal_win(i,j):
             win_stone = stones[i][j]
-            center_x,center_y = i+3,j+3
+            center_r,center_c = i+3,j+3
             break
 
         elif diagonal_left_win(i,j):
