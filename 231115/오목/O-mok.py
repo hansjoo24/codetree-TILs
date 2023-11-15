@@ -23,11 +23,14 @@ for i in range(LENGTH):
         cur_r, cur_c = i,j
         
         for dx,dy in zip(dxs,dys):
-            for _ in range(5):
+            for _ in range(4):
                 if in_range(cur_r+dx,cur_c+dy):
                     cur_r,cur_c = cur_r+dx, cur_c+dy
                     if stones[cur_r][cur_c] != cur_stone_num:
                         break
+                    else:
+                        pass
+                        #print(cur_r,cur_c,dx,dy)
 
                 else:
                     break
