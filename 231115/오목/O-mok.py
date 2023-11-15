@@ -47,10 +47,24 @@ def diagonal_win(r,c):
         else:
             if stones[newr][newc]!=stone_num:
                 return False
-    #print(r,c,"대각선")
+    #print(r,c,"대각선 오른쪽")
     return True
 
+def diagonal_left_win(r,c):
+    global stones
+    stone_num = stones[r][c]
+    if stone_num == 0:
+        return False
 
+    for i in range(5):
+        newr,newc = r+i, c-i
+        if newr>= LENGTH or newc< 0:
+            return False
+        else:
+            if stones[newr][newc]!=stone_num:
+                return False
+    #print(r,c,"대각선 오른쪽")
+    return True
 
 win_stone = 0
 center_x, center_y = -1,-1
@@ -69,6 +83,11 @@ for i in range(LENGTH):
         elif diagonal_win(i,j):
             win_stone = stones[i][j]
             center_x,center_y = i+3,j+3
+            break
+
+        elif diagonal_left_win(i,j):
+            win_stone = stones[i][j]
+            center_x,center_y = i+3,j-3
             break
 
 
