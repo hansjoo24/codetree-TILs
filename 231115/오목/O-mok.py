@@ -70,8 +70,7 @@ for i in range(LENGTH):
             win_stone = stones[i][j]
             center_x,center_y = i+3,j+3
             break
-    else:
-        break
+
 
 if win_stone == 0:
     print(0)
