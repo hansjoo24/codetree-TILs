@@ -14,11 +14,10 @@ for i in range(n):
         case 'H':
             photo[pos] = 2
 
-for i in range(max_pos-k):
+for i in range(max_pos-k+1):
     total = 0
     for j in range(i,i+k+1):
         total += photo[j]
-
     max_total = max(total,max_total)
 
 print(max_total)
