@@ -9,9 +9,18 @@ for _ in range(n):
     basket[basket_pos] +=candy_num
 
 
-for c in range(k,MAX_BASKET-k):
+for c in range(MAX_BASKET):
     total = 0
-    for j in range(c-k,c+k+1):
+    if c-k<0:
+        start = 0
+    else:
+        start = c-k
+    if c+k > MAX_BASKET:
+        end = MAX_BASKET
+    else:
+        end = c+k
+
+    for j in range(start,end+1):
         total+=basket[j]
         
     max_total = max(total,max_total)
