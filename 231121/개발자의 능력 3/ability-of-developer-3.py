@@ -12,8 +12,8 @@ def diff(a,b,c):
     return abs(sum1-sum2)
 
 for a in range(6):
-    for b in range(6):
-        for c in range(6):
+    for b in range(a+1,6):
+        for c in range(b+1,6):
             min_score = min(min_score,diff(a,b,c))
 
 print(min_score)
