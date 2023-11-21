@@ -2,7 +2,7 @@ MAX_BASKET = 100
 n,k = map(int,input().split())
 max_total = -1
 
-basket = [0]*MAX_BASKET+1
+basket = [0]*(MAX_BASKET+1)
 
 for _ in range(n):
     candy_num,basket_pos = map(int,input().split())
