@@ -1,6 +1,6 @@
 MAX_LOCATE = 101
 n = int(input())
-max_size = -1 
+max_size = 0 
 
 photo = [0] * MAX_LOCATE
 for i in range(n):
