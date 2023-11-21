@@ -1,5 +1,6 @@
 MAX_BASKET = 100
 n,k = map(int,input().split())
+max_total = -1
 
 basket = [0]*MAX_BASKET
 
@@ -8,5 +9,11 @@ for _ in range(n):
     basket[basket_pos] = candy_num
 
 
-for i in range(k,MAX_BASKET-4):
-    print(i)
+for c in range(k,MAX_BASKET-k):
+    total = 0
+    for j in range(c-k,c+k+1):
+        total+=basket[j]
+    
+    max_total = max(total,max_total)
+
+print(max_total)
