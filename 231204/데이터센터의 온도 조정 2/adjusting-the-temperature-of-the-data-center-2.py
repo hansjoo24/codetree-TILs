@@ -1,7 +1,7 @@
 def get_works(Ta,Tb,C,G,H,num):
     if num < Ta:
         return C
-    elif num >=Ta and num < Tb:
+    elif num >=Ta and num <= Tb:
         return G 
     else:
         return H
