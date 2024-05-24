@@ -5,6 +5,7 @@ visited = [False]*n
 for i in range(m):
     x,y = map(int,input().split())
     graph[x-1][y-1] = 1
+    graph[y-1][x-1] = 1
 
 def DFS(node):
     if not visited[node]:
