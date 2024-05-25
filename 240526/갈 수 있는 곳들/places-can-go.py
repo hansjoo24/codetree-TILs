@@ -31,7 +31,8 @@ visited = init_visited()
 cnt = 0
 
 for start in start_points:
-    sx,sy = start[0]-1, start[1]-1
+    start = (start[0]-1, start[1]-1)
+    sx,sy = start
     if canGo(sx,sy):
         visited[sx][sy]=True
 
