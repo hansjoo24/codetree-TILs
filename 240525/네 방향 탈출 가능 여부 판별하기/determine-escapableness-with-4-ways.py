@@ -18,6 +18,10 @@ def BFS():
         x,y = queue[0][0], queue[0][1]
         queue.pop(0)
         visited[x][y]=True
+
+        if x==m-1 and y==n-1:
+            return 
+            
         #print("visited : ",x,y)
 
         dxs, dys = [1,0,-1,0],[0,1,0,-1]
