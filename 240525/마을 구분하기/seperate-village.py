@@ -30,8 +30,8 @@ def DFS(x,y):
 
 village_cnt = 0
 cnt_list = []
-for i in range(5):
-    for j in range(5):
+for i in range(n):
+    for j in range(n):
         if not visited[i][j] and graph[i][j]==1:
             cnt=0
             DFS(i,j)
