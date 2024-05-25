@@ -1,5 +1,7 @@
+from collections import deque 
 n,m = map(int,input().split())
-queue = [(0,0)]
+queue = deque()
+queue.append((0,0))
 
 graph = [list(map(int,input().split())) for _ in range(n)]
 visited = [[False]*m for _ in range(n)]
