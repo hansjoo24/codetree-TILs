@@ -1,0 +1,34 @@
+n,m = map(int,input().split())
+queue = [(0,0)]
+
+graph = [list(map(int,input().split())) for _ in range(n)]
+visited = [[False]*m for _ in range(n)]
+
+def canGo(x,y):
+    if x<0 or y<0 or x>=m or y>=n:
+        return False
+
+    elif visited[x][y]==True or graph[x][y]==0:
+        return False
+    else:
+        return True
+
+def BFS():
+    while len(queue)!= 0:
+        x,y = queue[0][0], queue[0][1]
+        queue.pop(0)
+        visited[x][y]=True
+        #print("visited : ",x,y)
+
+        dxs, dys = [1,0,-1,0],[0,1,0,-1]
+        for i in range(4):
+            dx, dy = dxs[i], dys[i]
+            newx, newy = x+dx, y+dy
+            if canGo(newx,newy):
+                queue.append((newx,newy))
+
+BFS()
+if visited[m-1][n-1] == True:
+    print(1)
+else:
+    print(0)
