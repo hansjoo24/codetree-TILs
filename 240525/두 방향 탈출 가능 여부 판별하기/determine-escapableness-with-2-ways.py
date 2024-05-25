@@ -1,7 +1,7 @@
 n,m = map(int,input().split())
 
-graph = [list(map(int,input().split())) for _ in range(m)]
-visited = [[False]*n for _ in range(m)]
+graph = [list(map(int,input().split())) for _ in range(n)]
+visited = [[False]*m for _ in range(n)]
 
 def canGo(x,y):
     if x>=n or y>=m or x<0 or y<0:
@@ -32,7 +32,7 @@ def DFS(x,y):
 DFS(0,0)
 #print(visited)
 
-if visited[m-1][n-1]:
+if visited[n-1][m-1]:
     print(1)
 else:
     print (0)
