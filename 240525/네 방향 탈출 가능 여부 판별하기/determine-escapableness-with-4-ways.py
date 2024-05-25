@@ -16,7 +16,7 @@ def canGo(x,y):
 def BFS():
     while len(queue)!= 0:
         x,y = queue[0][0], queue[0][1]
-        queue.pop(0)
+        queue.popleft()
         visited[x][y]=True
 
         if x==m-1 and y==n-1:
