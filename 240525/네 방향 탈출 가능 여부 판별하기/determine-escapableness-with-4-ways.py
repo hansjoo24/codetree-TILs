@@ -19,7 +19,6 @@ def BFS():
     while len(queue)!= 0:
         x,y = queue[0][0], queue[0][1]
         queue.popleft()
-        visited[x][y]=True
 
         if x==m-1 and y==n-1:
             return 
@@ -32,6 +31,7 @@ def BFS():
             newx, newy = x+dx, y+dy
             if canGo(newx,newy):
                 queue.append((newx,newy))
+                visited[newx][newy] = True
 
 BFS()
 if visited[m-1][n-1] == True:
