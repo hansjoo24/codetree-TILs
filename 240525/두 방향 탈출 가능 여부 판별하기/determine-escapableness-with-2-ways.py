@@ -1,7 +1,7 @@
 n,m = map(int,input().split())
 
-graph = [list(map(int,input().split())) for _ in range(n)]
-visited = [[False]*n for _ in range(n)]
+graph = [list(map(int,input().split())) for _ in range(m)]
+visited = [[False]*n for _ in range(m)]
 
 def canGo(x,y):
     if x>=n or y>=m or x<0 or y<0:
